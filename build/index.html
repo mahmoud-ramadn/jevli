@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="imges/png" href="./imges/fav.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.css">
+ 
+
+    
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- Option 1: Include in HTML -->
+
+</head>
+<body class="relative">
+
+ 
+    
+
+
+    <div id="list" class=" overflow-hidden w-[97%] mx-auto h-[0px] md:hidden block  top-[-120px] p-5   absolute left-1/2 -translate-x-1/2  z-[300]  mt-[100px]  duration-[0.3s] ease-linear">
+
+    
+    <div class="  mx-auto  w-full h-fit flex flex-col">
+
+        <a href="./index.html" class="py-2 text-white/90">Home</a>
+        <a href="./shope.html" class="py-2  border-b-[1px] border-t-[1px]  border-white/30 hover:text-white/90  ease-linear duration-200">Shope</a>
+        <a href="" class="py-2  hover:text-white/90 ease-linear duration-200">Decor</a>
+        <a href="" class="py-2  border-b-[1px] border-t-[1px]  border-white/30  hover:text-white/90 ease-linear duration-200">Plante</a>
+        <a href="" class="py-2  hover:text-white/90 ease-linear duration-200 ">Light</a>
+        <a href="" class="py-2  border-t-[1px]  border-white/30  hover:text-white/90 ease-linear duration-200">chair</a>
+    </div>
+        
+    
+    <div class="w-full py-3 relative">
+
+        <input  class="w-full py-4 outline-none caret-violet-500 text-violet-400 text-2xl  px-3 bg-[#232323] " type="search" name="" id="" placeholder="Search Here...">
+
+        <a class="py-2 px-3 bg-[#232323] absolute right-[10px] top-1/2 -translate-y-1/2 " href="#">
+            <i class="fa-solid fa-magnifying-glass text-2xl text-white/30"></i>
+
+        </a>
+
+
+
+    </div>
+
+
+    <div class="links  text-center w-full mx-auto  border-t-[1px] border-white text-white mt-5 ">
+        <i class="fa-brands fa-facebook-f px-5 py-3"></i>
+        <i class="fa-brands fa-twitter border-r-[1px] border-l-[1px] border-white px-10 py-3"></i>
+        <i class="fa-brands fa-instagram px-5 py-3"></i>
+    </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+   <nav class="w-full  flex  items-center justify-between   bg-white fixed left-0 top-0 px-3 md:px-10 py-6  z-[400] ">
+
+    <img class="wow bounce" src="./imges/logo.png" alt=""  data-wow-duration="0.5s" data-wow-delay="0.5s"> 
+
+
+    <ul class="md:flex items-center gap-8 hidden"> 
+        <li><a class="hover:text-orange-400 ease-linear duration-200 transition-all font-medium text-[14px] text-black/50" href="index.html">Home</a></li>
+        <li><a class="hover:text-orange-400 ease-linear duration-200 transition-all font-medium text-[14px] text-black/50"  href="./shope.html">Shop</a></li>
+        <li><a class="hover:text-orange-400 ease-linear duration-200 transition-all font-medium text-[14px] text-black/50" href="#">Decor</a></li>
+        <li><a class="hover:text-orange-400 ease-linear duration-200 transition-all font-medium text-[14px] text-black/50" href="#">Plant</a></li>
+        <li><a class="hover:text-orange-400 ease-linear duration-200 transition-all font-medium text-[14px] text-black/50" href="#">Light</a></li>
+        <li><a class="hover:text-orange-400 ease-linear duration-200 transition-all font-medium text-[14px] text-black/50" href="#">chair</a></li>
+    </ul>
+
+    <ul class="items-center gap-6 flex">
+       <a class="hidden md:block" href="#"><i class="fa-brands fa-facebook-f text-black/50 hover:text-orange-400 ease-linear duration-200 transition-all text-xl "></i></a> 
+       <a class="hidden md:block"  href="#"><i class="fa-brands fa-twitter text-black/50 hover:text-orange-400 ease-linear duration-200 transition-all text-xl"></i></a> 
+       <a class="hidden md:block"  href="#"><i class="fa-brands fa-instagram text-black/50 hover:text-orange-400 ease-linear duration-200 transition-all text-xl"></i></a> 
+       <a class="hidden md:block"  href="#"><i class="fa-solid fa-magnifying-glass text-black/50 hover:text-orange-400 ease-linear duration-200 transition-all text-xl"></i></a> 
+
+       <a id="bars" class="flex md:hidden flex-col  cursor-pointer gap-1"  href="#">
+        <div class="w-[20px] h-[2px] bg-black/50 rounded-md"></div>
+        <div class="w-[20px] h-[2px] bg-black/50 rounded-md"></div>
+        <div class="w-[20px] h-[2px] bg-black/50 rounded-md"></div>
+       </a> 
+
+       <a class="relative pr-4 group "   href="#">
+        <span id="carte" class=" absolute md:right-0 -right-1  -top-1 bg-orange-400  text-white rounded-md  shadow-lg  w-6 h-4  flex justify-center items-center font-medium">
+            0
+        </span>
+        <i id="maincar-t" class="fa-solid fa-cart-shopping  text-black/50 hover:text-orange-400  ease-linear duration-200 transition-all text-xl"></i>
+        
+         <div id="noprod" class="w-52 h-fit absolute py-6   group-hover:block  hidden right-0 top-7 bg-black rounded-md text-white text-center">
+            <h1 class="font-medium">No products in the cart.</h1>
+         </div>
+
+       </a> 
+
+
+
+    </ul>
+   </nav>
+
+
+   <div class="hero-section w-[99%] mx-auto md:h-fit  h-fit   shadow-md z-50  mt-[100px] p-7 md:grid-cols-2 grid grid-cols-1 relative">
+
+    <div class=" pii bg-white fixed   w-16 h-fit right-0 top-1/2 -translate-y-1/2  shadow-md rounded-md  md:z-40 md:flex hidden 
+    flex-col ">
+
+
+      <a class="text-2xl  text-center py-3  relative group " href="#">
+
+        <span class="absolute -left-2 top-0 bg-white rounded-md w-0 overflow-hidden py-3 shadow-md  group-hover:w-28 group-hover:-left-[100px] ease-linear duration-200  
+         text-[14px] ">
+        showCase
+        </span>
+
+        <i class="fa-solid fa-layer-group  relative text-black/35 group-hover:text-blue-400 ease-linear duration-200">
+                  
+             
+        </i>
+    </a>
+
+
+
+      <a class="border-t-[1px] border-b-[1px] border-gray-300 text-2xl  text-center py-3 relative group  text-black/35" href="#">
+        
+        <span class="absolute -left-2 top-0 bg-white rounded-md w-0 overflow-hidden py-3 shadow-md  group-hover:w-28 
+        group-hover:-left-[100px] ease-linear duration-200  
+        text-[14px] ">demo""viwer</span>
+        <i class="fa-solid fa-glasses group-hover:text-blue-400"></i>
+    </a>
+
+
+      <a class=" text-2xl  text-center py-3 text-black/35 relative group " href="#">
+         
+        <span class="absolute -left-2 top-0 bg-white rounded-md w-0 overflow-hidden py-3 shadow-md  group-hover:w-28 group-hover:-left-[100px] ease-linear duration-200  
+        text-[14px] ">
+       showCase
+       </span>
+
+        <i class="fa-solid fa-bag-shopping group-hover:text-blue-400"></i>
+
+       </a>
+
+      <a class="border-t-[1px] border-b-[1px] border-gray-300 text-2xl  text-center py-3  relative group text-black/35" href="#">
+        
+        <span class="absolute -left-2 top-0 bg-white rounded-md w-0 overflow-hidden py-3 shadow-md  group-hover:w-28 group-hover:-left-[100px] ease-linear duration-200  
+        text-[14px] ">
+       showCase
+       </span>
+
+        <i class="fa-regular fa-circle-question  group-hover:text-blue-400  "></i>
+    </a>
+
+
+      <a class=" text-2xl  text-center py-3 text-black/35 relative group " href="#">
+        <span class="absolute -left-2 top-0 bg-white rounded-md w-0 overflow-hidden py-3  hidden shadow-md group-hover:block  group-hover:w-28 group-hover:-left-[100px] ease-linear duration-200 : 
+        text-[14px] ">
+       Get support
+       </span>
+        <i class="fa-solid fa-life-ring group-hover:text-blue-400"></i>
+    </a>
+
+      <a class="border-t-[1px] border-gray-300 text-2xl  text-center py-3 text-black/35 relative group" href="#">
+
+        <span class="absolute -left-2 top-0 bg-white rounded-md w-0 overflow-hidden py-3  shadow-md group-hover:w-28 group-hover:-left-[100px] ease-linear duration-200  
+        text-[14px] ">
+       showCase
+       </span>
+
+        <i class="fa-solid fa-envelope group-hover:text-blue-400"></i>
+
+    </a>
+
+
+
+    </div>
+    
+     
+
+
+
+
+
+
+    <div class="col-span-1 md:h-full h-[400px] bg-[#f6f6f6]
+    flex  md:justify-center justify-start items-center
+    
+    " >
+    <div class="md:w-3/4 h-3/4 w-full  space-y-7  p-2  flex flex-col justify-center items-start relative">
+        <input class="bg-black text-white rounded-lg py-2 px-1 text-center cursor-pointer  " type="button" value="new collection">
+         <h1 class=" capitalize font-medium md:text-6xl text-3xl ">Fill your home with uniqueness</h1>
+         <p class="font-medium text-2xl text-black/30" >Huge variety with modern glamour!</p>
+        <a href="#"><button class="font-bold text-orange-400 cursor-pointer  ">Explore <i class="fa-solid fa-angle-down"></i></button></a>
+    </div>
+
+
+    </div>
+
+    <div  class="col-span-1 md:h-full h-[400px] relative  wow bounceInRight" data-wow-duration="1s" data-wow-delay="1s"   >
+
+    <img class="mx-auto relative  " src="./imges/inside-weather-E5lK_COkD2E-unsplash-copy.jpg" alt="">
+
+
+       <span class="absolute md:left-[100px] left-[20px] md:top-[202px] top-[150px]  w-8 h-8    group bg-orange-500 border-4 rounded-full  border-white flex justify-center items-center 
+       ease-linear duration-200 hover:w-10 hover:h-10">
+
+        <i class="fa-solid fa-plus font-bold text-xl text-white  "></i>
+
+
+        <span class="bg-white absolute top-1/2 -translate-y-1/2 py-5 text-gray-400 font-medium  group-hover:animate-none  hidden group-hover:block  right-[-250px]  rounded-md px-6">White stone storage unit </span>
+
+       </span>
+
+
+
+       <span class="absolute  md:right-44 right-8 md:top-[100px] top-[60px] w-8 h-8    group bg-orange-500 border-4 rounded-full  border-white flex justify-center items-center 
+       ease-linear duration-200 hover:w-10 hover:h-10">
+
+        <i class="fa-solid fa-plus font-bold text-xl text-white  "></i>
+
+
+        <span class="bg-white absolute top-1/2 py-2 text-center   -translate-y-1/2  right-10 text-gray-400 font-medium  group-hover:animate-none  hidden group-hover:block   rounded-md w-[200px]">
+            dark beig dinnge chair
+        </span>
+
+       </span>
+
+
+
+    </div> 
+
+   </div>
+
+
+   <div class="container border-b-[1px] border-gray-500 border-solid mx-auto text-center py-4 px-3">
+    
+    <h1 class="font-medium text-xl text-black/35" >! Use discount code: FIRSTIME to get  <span class="text-orange-400">10% off </span> your first order !</h1>
+
+   </div>
+
+
+   <div class="layes container mx-auto grid md:grid-cols-3 grid-cols-1 gap-4 py-20 px-8">
+
+    <div class="col-span-1 bg-red-400 h-fit  relative  wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.5s">
+
+        <div class="info absolute  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
+            <input class="bg-black text-white rounded-full  py-1 px-3 text-center cursor-pointer  " type="button" value="new collection">
+            <h1 class="font-medium text-4xl py-10" >Lights & Decor</h1>
+            <a class="hover:text-orange-500 ease-linear duration-200" href="#"><button class="font-bold  cursor-pointer ">See More <i class="fa-solid fa-angle-right"></i></button></a>
+
+            
+        </div>
+          
+         
+        <img class="w-full" src="./imges/layer3.jpg" alt="">
+    </div> 
+
+    <div class="col-span-1 bg-red-400 h-fit relative wow fadeInUp " data-wow-duration="1s" data-wow-delay="1s">
+        
+        <div class="info absolute  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
+    
+            <h1 class="font-medium text-4xl py-10" >Kitchen Cutlery</h1>
+            <a class="hover:text-orange-500 ease-linear duration-200" href="#"><button class="font-bold cursor-pointer ">See More <i class="fa-solid fa-angle-right"></i></button></a>
+
+            
+        </div>
+
+        <img class="w-full" src="./imges/laye1.jpg" alt="">
+    </div> 
+
+    <div class="col-span-1 bg-red-400 h-fit relative  wow fadeInUp"  data-wow-duration="1s" data-wow-delay="1.5s" >
+
+        <div class="info absolute  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
+    
+           <button class=" bg-orange-500 rounded-full py-1 px-4" type="button"><a  class="text-white font-medium"  href="#">sale</a></button>
+
+            <h1 class="font-medium text-4xl py-10" >Living Room</h1>
+
+            <a class=" " href="#">
+                <button class="font-bold text-black cursor-pointer hover:text-orange-500 ease-linear duration-200 ">See More<i class="fa-solid fa-angle-right"></i></button>
+            </a>
+
+            
+        </div>
+        <img class="w-full" src="./imges/layer2.jpg" alt="">
+        </div> 
+
+    
+    </div>
+   
+
+    <div class="brands container py-6 flex justify-center items-center gap-32 mx-auto flex-wrap px-6">
+        <img class="" src="./imges/praten1.png" alt="">
+        <img class=" hidden  md:block lg:block" src="./imges/praten2.png" alt="">
+        <img class=" hidden md:block lg:block" src="./imges/praten3.png" alt="">
+        <img class=" hidden md:hidden lg:block" src="./imges/praten4.png" alt="">
+        <img class="hidden min-md:hidden   lg:block " src="./imges/praten5.png" alt="">
+        <img class="hidden md:hidden    lg:block  " src="./imges/praten6.png" alt="">
+    </div>
+
+    <div class="spechiloffer w-full flex flex-wrap justify-center items-center gap-44 flex-row bg-black/10  pt-11 "   >
+        <div class=" text-center">
+            <img class=" wow rotateInDownLeft" src="./imges/white.png" alt="" data-wow-duration="1s" data-wow-delay="1s">
+        </div>
+        <div class="w-full md:w-96 px-10 space-y-5">
+          <h3 class="text-2xl">Our special offer</h1>
+          <h1 class="text-4xl font-medium">Featured products with amazing color variety for your home</h1>
+          <button class="bg-black text-white px-8 hover:text-white font-medium hover:bg-orange-500 ease-linear duration-200 py-2 rounded-md"><a href="#">Purches</a></button>
+        </div>
+    </div>
+
+
+    <div class="options container mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center items-center gap-10 py-16">
+        <div class="md:col-span-1 col-span-[1/2] text-center space-y-4 px-10">
+            <i class="fa-regular fa-clock text-6xl text-black/35"></i>
+            <h1 class="font-medium ">24 h Shipping</h1>
+            <p class="text-black/30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo felis, consectetur id elit id.</p>
+        </div>
+        <div class="md:col-span-1  col-span-[1/2] text-center space-y-4 px-10 md:border-r-[1px]  md:border-l-[1px] ">
+            <i class="fa-solid fa-truck text-6xl text-black/35"></i>
+            <h1 class="font-medium ">Free Returns</h1>
+            <p class="text-black/30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo felis, consectetur id elit id.</p>
+        </div>
+        <div class="md:col-span-1  col-span-[1/2] text-center space-y-4 px-10">
+            <i class="fa-solid fa-wallet text-6xl text-black/35"></i>
+            <h1 class="font-medium ">100% Money Back Guarantee</h1>
+            <p class="text-black/30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo felis, consectetur id elit id.</p>
+        </div>
+    </div>
+
+
+<div class="container text-center mx-auto items-center-center flex flex-col gap-6 p-5 wow bounceIn" data-wow-duration="1s" data-wow-delay="1s" data-wow-offset="30">
+    <h1 class="text-5xl font-medium">Ideas for inspiration</h1>
+
+    <img class="" src="./imges/Hue_Saturation-2.jpg" alt="">
+  
+    <div class="colosts flex justify-between items-center flex-wrap gap-5 ">
+       <div class="one text-start w-[520px]">
+        <h1 class="text-3xl font-medium">Find the closest store to your location</h1>
+        <p class="text-black/30">Quisque ut aliquam nunc, at finibus ante. Sed dignissim, nulla a fermentum egestas, odio</p>
+       </div>
+        
+       <button class="text-white bg-black rounded-sm py-3 px-7 ease-linear duration-200 hover:text-white hover:bg-orange-500  " type="button">Find Now</button>
+    </div>
+
+</div>
+
+
+<div class="container mx-auto text-center  ">
+    <h1 class="font-medium md:text-4xl text-3xl">Great deals for great prices</h1>
+
+    <div class="box-ecommers grid  lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10  justify-center items-center p-6 container mx-auto">
+
+        <div class="col-span-1   ">
+            <img class="w-full" src="./imges/5559331632_2_1_1_0004_bedroom-bulb-interior-decoration-lamp-545048-300x300.jpg" alt="">
+            
+         <div class="flex justify-between items-center py-3" >
+             <h1 class="text-[16px] font-medium ">Metallic sidetable lamp</h1>
+             <div class="w-10 h-10 flex items-center rounded-full justify-center bg-blue-100  " >
+                <i id="shope" class="fa-solid fa-cart-shopping text-black/35 hover:text-orange-500 cursor-pointer"></i>
+             </div>
+
+        </div>
+           <h3 class="font-medium text-xl w-full text-start">£5.00</h3>
+        </div>
+        
+
+        <div class="col-span-1   ">
+            <img class="w-full" src="./imges/5559331632_2_1_1_0007_christopher-burns-56tCOHi5OzA-unsplash-300x300.jpg" alt="">
+            
+         <div class="flex justify-between items-center py-3" >
+             <h1 class="text-[16px] font-medium ">Minimalistic chair</h1>
+             <div class="w-10 h-10 flex items-center rounded-full justify-center bg-blue-100  " >
+                <i id="shope" class="fa-solid fa-cart-shopping text-black/35 hover:text-orange-500 cursor-pointer "></i>
+             </div>
+
+        </div>
+           <h3 class="font-medium text-xl w-full text-start">£5.00</h3>
+        </div>
+
+        <div class="col-span-1   ">
+            <img class="w-full" src="./imges/5559331632_2_1_1_0009_minh-pham-Wn1gmozpNZc-unsplash-300x300.jpg" alt="">
+            
+         <div class="flex justify-between items-center py-3" >
+             <h1 class="text-[16px] font-medium ">Wooden picture frame</h1>
+             <div class="w-10 h-10 flex items-center rounded-full justify-center bg-blue-100  " >
+                <i id="shope" class="fa-solid fa-cart-shopping text-black/35 hover:text-orange-500 cursor-pointer "></i>
+             </div>
+
+        </div>
+           <h3 class="font-medium text-xl w-full text-start">£5.00</h3>
+        </div>
+
+        <div class="col-span-1   ">
+            <img class="w-full" src="./imges/5559331632_2_1_1_0008_minh-pham-7pCFUybP_P8-unsplash-300x300.jpg" alt="">
+            
+         <div class="flex justify-between items-center py-3" >
+             <h1 class="text-[16px] font-medium ">Bedroom mirror</h1>
+             <div class="w-10 h-10 flex items-center rounded-full justify-center bg-blue-100  " >
+                <i id="shope" class="fa-solid fa-cart-shopping text-black/35 hover:text-orange-500  cursor-pointer"></i>
+             </div>
+
+        </div>
+           <h3 class="font-medium text-xl w-full text-start">£5.00</h3>
+        </div>
+
+        <div class="col-span-1   ">
+            <img class="w-full" src="./imges/5559331632_2_1_1_0011_jeremy-lwanga-uUwEAW5jFLE-unsplash-300x300.jpg" alt="">
+            
+         <div class="flex justify-between items-center py-3" >
+             <h1 class="text-[16px] font-medium ">Table succulent plant</h1>
+             <div class="w-10 h-10 flex items-center rounded-full justify-center bg-blue-100  " >
+                <i id="shope" class="fa-solid fa-cart-shopping text-black/35 hover:text-orange-500 cursor-pointer "></i>
+             </div>
+
+        </div>
+           <h3 class="font-medium text-xl w-full text-start">£5.00</h3>
+        </div>
+
+        <div class="col-span-1   ">
+            <img class="w-full" src="./imges/5559331632_2_1_1_0010_sincerely-media-VDPauwJ_sHo-unsplash-300x300.jpg" alt="">
+            
+         <div class="flex justify-between items-center py-3" >
+             <h1 class="text-[16px] font-medium ">Metallic sidetable lamp</h1>
+             <div class="w-10 h-10 flex items-center rounded-full justify-center bg-blue-100  " >
+                <i id="shope" class="fa-solid fa-cart-shopping text-black/35 hover:text-orange-500 cursor-pointer "></i>
+             </div>
+
+        </div>
+           <h3 class="font-medium text-xl w-full text-start">£5.00</h3>
+        </div>
+        <div class="col-span-1   ">
+            <img class="w-full" src="./imges/5559331632_2_1_1_0006_kari-shea-3_cyj5YkhTs-unsplash-300x300.jpg" alt="">
+            
+         <div class="flex justify-between items-center py-3" >
+             <h1 class="text-[16px] font-medium ">Cactus succulent plant</h1>
+             <div class="w-10 h-10 flex items-center rounded-full justify-center bg-blue-100  " >
+                <i id="shope" class="fa-solid fa-cart-shopping text-black/35 hover:text-orange-500 cursor-pointer "></i>
+             </div>
+
+        </div>
+           <h3 class="font-medium text-xl w-full text-start">£5.00</h3>
+        </div>
+        <div class="col-span-1   ">
+            <img class="w-full" src="./imges/5559331632_2_1_1_0005_stephanie-harvey-80xePqQVKzs-unsplash-300x300.jpg" alt="">
+            
+         <div class="flex justify-between items-center py-3" >
+             <h1 class="text-[16px] font-medium ">Decorative pillow</h1>
+             <div class="w-10 h-10 flex items-center rounded-full justify-center bg-blue-100  " >
+                <i id="shope" class="fa-solid fa-cart-shopping text-black/35 hover:text-orange-500  cursor-pointer"></i>
+             </div>
+
+        </div>
+           <h3 class="font-medium text-xl w-full text-start">£5.00</h3>
+        </div>
+        
+
+
+
+    </div>
+
+
+    <hr>
+
+
+</div>
+
+
+<div class="nestter container mx-auto text-center py-7 space-y-8 px-7">
+    <h1 class="text-3xl font-medium uppercase">Join the newsletter</h1>
+    <p class="md:text-xl text-[17px] font-thin text-black/40">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris</p>
+    <div class="w-2/4 mx-auto flex md:justify-between items-center gap-5   justify-center flex-wrap">
+  <input class="md:w-[70%] w-full p-3 outline-none  bg-black/10 rounded-md " type="email" placeholder="Please enter you email here ..."  >
+
+
+  <button class="bg-black text-white rounded-md py-3 px-6 font-medium ease-linear hover:text-white hover:bg-orange-500 duration-200">Subscribe </button>
+    </div>
+
+</div>
+
+<div class="footter    py-10  px-14 mx-auto h-fit bg-black/10 grid items-start  justify-center gap-10 lg:grid-cols-4 md:grid-cols-3 grid-cols-1">
+    
+      <div class="space-y-4 px-2 col-span-1">
+        <h1 class="font-medium">PAYMENT METHOD</h1>
+    
+        <p class=" leading-8 text-sm text-black/65">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+        
+        <div class="icons space-x-2 ">
+ <i class="fa-brands fa-cc-visa text-3xl"></i> 
+ <i class="fa-brands fa-cc-mastercard text-3xl"></i>
+ <i class="fa-brands fa-cc-amex text-3xl"></i>
+ <i class="fa-brands fa-cc-paypal text-3xl"></i>
+ <i class="fa-brands fa-cc-jcb text-3xl"></i>
+        </div>
+
+<p class="text-sm" ><i class="fa-solid fa-lock"></i>  Secure online payment</p>
+
+    </div>
+
+     <div class="col-span-1 space-y-3 ">
+        <h1 class="text-xl font-medium">TOP RATED</h1>
+
+        <div class=" flex items-center gap-4  ">
+            <img class="w-1/6" src="./imges/5559331632_2_1_1_0004_bedroom-bulb-interior-decoration-lamp-545048-300x300.jpg" alt=""> 
+
+            <h1 class="font-bold w-2/3">Metallic table lamp plant   <p>£5.00</p></h1>
+          
+        </div>
+        <div class=" flex items-center gap-4 ">
+            <img class="w-1/6" src="./imges/white.png" alt=""> 
+
+            <h1 class="font-bold w-2/3">Concrete flower pot  <p>£5.00</p></h1>
+          
+        </div>
+        <div class=" flex items-center gap-4 ">
+            <img class="w-1/6" src="./imges/5559331632_2_1_1_0011_jeremy-lwanga-uUwEAW5jFLE-unsplash-300x300.jpg" alt=""> 
+
+            <h1 class="font-bold w-2/3">Table succulent plant <p>£5.00</p></h1>
+          
+        </div>
+
+    
+
+
+
+     </div>
+
+
+     <div class="col-span-1 space-y-3">
+        <h1 class="font-medium">SHOPPING GUIDE</h1>
+        <p class="text-black/45">FAQ</p>
+        <p class="text-black/45" >Shipment</p>
+        <p class="text-black/45">Returns</p>
+        <p  class="text-black/45">Policies</p>
+        <p class="text-black/45">Gift cards</p>
+        <p class="text-black/45">Clothing care</p>
+        <p class="text-black/45">Purchase conditions</p>
+     </div>
+
+     <div class="col-span-1 space-y-3">
+        <h1 class="font-medium">COMPANY</h1>
+        <p class="text-black/45">About us</p>
+        <p class="text-black/45" >Press</p>
+        <p class="text-black/45">Our team</p>
+        <p  class="text-black/45">Offices</p>
+        <p class="text-black/45">Affiliates</p>
+        <p class="text-black/45">Giveaway</p>
+        <p class="text-black/45">Contact</p>
+     </div>
+
+
+
+
+ 
+</div>
+
+<div class="w-full mx-auto text-center border-t-[1px] border-t-black  bg-black/10 py-2">
+ 
+
+    <p>Copyright © 2020 JevelinTheme - Theme by Mahmoud Ramadan</p>
+    </div>
+
+
+ 
+        
+    
+ <iframe class="hidden" width="560" height="315" src="https://www.youtube.com/embed/HVE63JhaUrA?si=MQC1IqekXyJegYkP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+ 
+
+
+ 
+ 
+ 
+
+
+
+<script src="./js/wow.min.js"></script>
+
+<script>
+    new WOW().init();
+</script>
+
+
+   <script src="./js/srcitp.js"></script>
+   <script src="https://kit.fontawesome.com/bd24e87d3b.js" crossorigin="anonymous"></script>
+</body>
+</html>
